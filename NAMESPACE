@@ -1,1 +1,4 @@
+export(squirrel)
+import(tidyverse)
+import(insight)
 exportPattern("^[[:alpha:]]+")

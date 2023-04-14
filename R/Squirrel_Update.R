@@ -1,15 +1,22 @@
-library(insight)
-library(ggplot2)
+x<-c("tidyverse","insight")
 
+invisible(lapply(x, library, character.only = TRUE))
 
+options(defaultPackages=c(getOption("defaultPackages"),
+                          "tidyverse","insight"))
+
+require(tidyverse)
+require(insight)
+
+#Data
 hair <- c("Blonde", "Brown", "Black", "Red", "Brown", "Brown", "Brown", "Black", "Blonde", "Brown")
 sex <- c(rep("F", 5), rep("M", 5))
 practice <- data.frame(hair,sex)
 
+#Introduction Functions
 squirrel = function(x){
   print_color(
     "Welcome to squirrel, a tutorial package that details the apply family of functions and a few ggplot2 figures.
-    Make sure to download the insight and tidyverse packages using intall.packages() and then library().
 
 To start an apply tutorial, type squirrel_apply()
 
@@ -40,7 +47,7 @@ To learn bar charts type learn_barchart(0)", "green")
 
 
 #Apply Family
-
+##lapply
 learn_lapply = function(x){
   if(x==0){
     print_color("
@@ -128,7 +135,7 @@ enter learn_lapply(0) to restart this tutorial", "green")
   }
 }
 
-
+##sapply
 learn_sapply = function(x) {
   if (x==0) { print_color("
   Let's look at the sapply function and its inputs.
@@ -165,6 +172,8 @@ learn_sapply = function(x) {
   }
 }
 
+
+##tapply
 learn_tapply = function(x){
   if(x==0){
     print_color("
@@ -217,6 +226,7 @@ go to squirrel_ggplot2() to learn about data visualization", "green")
   }
 }
 
+##apply
 learn_apply = function(x){
   if(x==0){
     print_color("
@@ -268,7 +278,8 @@ Go back to the squirrel_apply() to learn more about the apply family functions o
   }
 }
 
-
+#Data Visualization
+##histograms
 learn_histogram = function(x){
   if (x==0) { print_color("The histogram function of in ggplot is a great way to visualize the frequency of a numerical variable.
               Type learn_histogram(1) to learn more.", "blue")
@@ -313,6 +324,7 @@ learn_histogram = function(x){
   }
 }
 
+##piecharts
 learn_piechart = function(x){
   if(x==0){
     print_color("
@@ -358,10 +370,10 @@ Let's create a piechart using the 'gear' variable!
   'Number of Gears' will be the legend label,
   Following the general syntax to create a piechart we have:
 
-  pie_chart <- ggplot(mtcars, aes(x = '', fill = factor(gear))) +
-  geom_bar(width = 1, stat = 'count') +
-  coord_polar(theta = 'y') +
-  labs(title = 'Pie Chart of Number of Cars by Number of Gears', fill = 'Number of Gears')
+ pie_chart <- ggplot(mtcars, aes(x=' ', fill=factor(gear))) +
+ geom_bar(width = 1, stat = 'count') +
+ coord_polar(theta = 'y') +
+ labs(title ='Pie Chart of Number of Cars by Number of Gears', fill = 'Number of Gears')
 
   Type 'learn_piechart(0)' to start again or 'learn_piechart(5)' for a practice problem.", 'blue')
   } else if(x==5){
@@ -388,7 +400,7 @@ Try to play around with the mtcars dataset and other datasets to create more pie
   }
 }
 
-
+##boxplots
 learn_boxplot = function(x){
   if(x==0){
     print_color("
@@ -456,6 +468,8 @@ Try to play around with the mtcars dataset and other datasets to create more box
   }
 }
 
+
+##scatterplots
 learn_scatterplot = function(x){
   if(x==0){
     print_color("
@@ -555,6 +569,8 @@ Try to play around with the iris dataset and other datasets to create more boxpl
   }
 }
 
+
+##barcharts
 learn_barchart = function(x){
   if(x==0){
     print_color("
