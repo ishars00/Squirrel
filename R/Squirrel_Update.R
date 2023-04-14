@@ -17,6 +17,7 @@ practice <- data.frame(hair,sex)
 squirrel = function(x){
   print_color(
     "Welcome to squirrel, a tutorial package that details the apply family of functions and a few ggplot2 figures.
+    Install the 'insight' and 'tidyverse' packages before beginning the tutorials.
 
 To start an apply tutorial, type squirrel_apply()
 
