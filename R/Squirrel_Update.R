@@ -285,12 +285,12 @@ learn_histogram = function(x){
   if (x==0) { print_color("The histogram function of in ggplot is a great way to visualize the frequency of a numerical variable.
               Type learn_histogram(1) to learn more.", "blue")
   }else if (x==1){
-    print_color("Let's use the iris dataset to create our histogram plots. You can type head(iris) to look at the dataset. You'll see a variable called 'Petal.Length' that tells us the miles per gallon for a car. Type
+    print_color("Let's use the iris dataset to create our histogram plots. You can type head(iris) to look at the dataset. You'll see a variable called 'Petal.Length' that tells us the petal length of a flower. Type
 
     ggplot(iris) +
     geom_histogram(aes(x=Petal.Length))
 
-  to obtain a histogram of miles per gallon. Type learn_histogram(2) to learn more about plotting histograms using ggplot2", "blue")
+  to obtain a histogram of petal lengths. Type learn_histogram(2) to learn more about plotting histograms using ggplot2", "blue")
   }else if(x==2){
     print_color("Notice that the previous graph recommends us to choose a better binwidth. The binwidth determines the range of data within each bar. You can choose your binwidth by adding an argument in geom_histogram. Type
 
