@@ -21,7 +21,7 @@ squirrel = function(x){
 
 To start an apply tutorial, type squirrel_apply()
 
-To start a ggplot2 tutorial, type squirrel_ggplot2()", "black")
+To start a ggplot2 tutorial, type squirrel_ggplot2()")
 }
 
 squirrel_apply = function(x){
