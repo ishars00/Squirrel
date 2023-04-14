@@ -282,7 +282,7 @@ Go back to the squirrel_apply() to learn more about the apply family functions o
 #Data Visualization
 ##histograms
 learn_histogram = function(x){
-  if (x==0) { print_color("The histogram function of in ggplot is a great way to visualize the frequency of a numerical variable.
+  if (x==0) { print_color("The histogram function in ggplot is a great way to visualize the frequency of a numerical variable.
               Type learn_histogram(1) to learn more.", "blue")
   }else if (x==1){
     print_color("Let's use the iris dataset to create our histogram plots. You can type head(iris) to look at the dataset. You'll see a variable called 'Petal.Length' that tells us the petal length of a flower. Type
