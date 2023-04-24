@@ -4,7 +4,7 @@ library(devtools)
 library(roxygen2)
 
 library(insight)
-library(ggplot2)
+library(tidyverse)
 
 
 hair <- c("Blonde", "Brown", "Black", "Red", "Brown", "Brown", "Brown", "Black", "Blonde", "Brown")
@@ -249,10 +249,10 @@ Type print(cars) to view the dataset. Type learn_apply(2) for the next step.", "
       X is your array/matrix/dataset.
       The margin is a vector giving the subscripts which the function will be applied over.
       Function is the function you want to apply across your dataset.
-Type apply(cars, 1, mean). We are finding the average speed and average distance traveled to stop, 
+Type apply(cars, 1, mean). We are finding the average speed and average distance traveled to stop,
 so mean represents our function.
 
-You should see 3 rows of a lot of different numbers! Using 1 in the margin will apply your function to rows. 
+You should see 3 rows of a lot of different numbers! Using 1 in the margin will apply your function to rows.
 This is not really what we are looking for!
 
 Type learn_apply(3) for the next step. ", "green")
@@ -262,7 +262,7 @@ Type learn_apply(3) for the next step. ", "green")
       X is your array/matrix/dataset.
       The margin is a vector giving the subscripts which the function will be applied over.
       Function is the function you want to apply across your dataset.
-Type apply(cars,2,mean). This time, you should only see two numbers: the average speed and average distance traveled. 
+Type apply(cars,2,mean). This time, you should only see two numbers: the average speed and average distance traveled.
 Using 2 in the margin will apply your function to the columns. The speed is pretty low, but remember this data is from the 1920s!
 
 Type apply(4) for the next step.", "green")
@@ -270,9 +270,9 @@ Type apply(4) for the next step.", "green")
     print_color("
 Congratulations! You have learned how to use the apply() function.
 
-For more practice, you can use other R datasets/frames such as mtcars, or by creating your own matrix 
+For more practice, you can use other R datasets/frames such as mtcars, or by creating your own matrix
 (ex: matrix <- matrix(c(3, 9, -1, 4, 2, 6,8,9,14), nrow = 3).
-Go back to the squirrel_apply() to learn more about the apply family functions 
+Go back to the squirrel_apply() to learn more about the apply family functions
 or go to squirrel_ggplot2() to learn about data visualization.","green")
   } else if(x<0){
     print_color("Try again ;) - type learn_apply(0-5) for lessons on the apply function!", "red")
