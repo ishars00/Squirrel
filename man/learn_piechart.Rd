@@ -10,6 +10,21 @@
 \usage{Where x is a value between 0-7
 learn_piechart(x)
 }
+\arguments{
+  \item{x}{0-7
+%%     ~~Describe \code{x} here~~
+}
+}
+\details{
+learn_tapply(0) - Description and usages of piecharts.
+learn_tapply(1) - General syntax of piecharts (example code).
+learn_tapply(2) - General syntax of piecharts (variables).
+learn_tapply(3) - General syntax of piecharts (commands/functions).
+learn_tapply(4) - Worked piechart example.
+learn_tapply(5) - Piechart practice problem.
+learn_tapply(6) - Piechart practice problem solution.
+learn_tapply(7) - Recomendations moving forward.
+}
 \author{Sahasrabudhe, Mayrer, Patel, Jacobs
 %%  ~~who you are~~
 }

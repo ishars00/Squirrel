@@ -68,7 +68,7 @@ q = list(X=c(2,6,7,6,7,8,9)) # Example List
 Above is a common method for generating your own list in R,
 try generating your own list defined as q. You should create a list
 of numbers in the parenthese separeated by commas. This list can be as long
-as you like! We will use your defined list q going forward forward.
+as you like! We will use your defined list q going forward.
 enter learn_lapply(2) to continue this tutorial", "green")
   }else if(x==2){
     print_color("
@@ -125,16 +125,21 @@ This tutorial has run through the basic uses of the lapply function in R.
 Note that this function may also be used with data frames and vectors,
 for this specific tutorial we have demonstrated using the list created by you.
 
-Try to play around with other datasets to learn more about the lapply function.
-Go back to the squirrel_apply() to learn more about the apply family functions or
-go to squirrel_ggplot2() to learn about data visualization.
+Formal components of the lapply function that we used:
+lapply(X, FUN, ...)
+X = a vector of an expressionable object
+FUN = a function to be applied
+... = optional arguments
+
 enter learn_lapply(0) to restart this tutorial", "green")
-  }else if(x<0){
-    print_color("Try again ;) - Type learn_lapply(0) to start the lapply lesson.", "red")
-  } else if(x>6) {
-    print_color("Try again ;) - Type learn_lapply(0) to start the lapply lesson.", "red")
-  }
-}
+}else if (x==7) { print_color("
+Try to play around with other datasets to learn more about the lapply function. Go back to the squirrel_apply() to learn more about the apply family functions or go to squirrel_ggplot2() to learn about data visualization.","blue")
+}else if(x<0){
+  print_color("Try again ;) - Type learn_lapply(0) to start the lapply lesson.", "red")
+} else if(x>7) {
+  print_color("Try again ;) - Type learn_lapply(0) to start the lapply lesson.", "red")
+}}
+
 
 ##sapply
 learn_sapply = function(x) {
@@ -172,6 +177,7 @@ learn_sapply = function(x) {
     print_color("Try again ;) - type learn_sapply(0-4) for lessons on the sapply function!", "red")
   }
 }
+
 
 
 ##tapply

@@ -17,6 +17,14 @@ learn_sapply(x)
 }
 }
 \details{
+'learn_sapply(0)' to learn about 'X', 'FUNCTION'
+
+  'learn_sapply(1)' for a worked sapply example using a list
+
+  'learn_sapply(2)' for a worked sapply example using a dataset
+
+  'learn_sapply(3)' for a worked sapply example where you create your own function
+
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
@@ -39,9 +47,13 @@ learn_sapply(x)
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{squirrel()' to go back to the beginning.
+
 'learn_apply(0)' to learn about the sapply function.
+
 'learn_lapply(0)' to learn about the lapply function.
+
 'learn_tapply(0)' to learn about the tapply function.
+
 'squirrel_ggplot2()' to learn about data visualization using ggplot2.
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }

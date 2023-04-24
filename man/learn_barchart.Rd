@@ -12,6 +12,16 @@ learn_barchart(x)
 
 }
 
+\details{
+%%  ~~ If necessary, more details than the description above ~~
+learn_barchart(0) - Description of a Bar Chart
+learn_barchart(1) - Setting up a Bar Chart in R
+learn_barchart(2) - Variables in a Bar Chart
+learn_barchart(3) - Putting together the Code
+learn_barchart(4) - Stacked Bar Chart and Side-By-Side Barchart
+learn_barchart(5) - End of Bar Chart Tutorial
+}
+
 \author{Sahasrabudhe, Mayrer, Patel, Jacobs
 
 }

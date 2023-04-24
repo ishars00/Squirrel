@@ -10,6 +10,21 @@
 \usage{Where x is a value between 0-7
 learn_boxplot(x)
 }
+\arguments{
+  \item{x}{0-7
+%%     ~~Describe \code{x} here~~
+}
+}
+\details{
+learn_tapply(0) - Description and usages of boxplots.
+learn_tapply(1) - General syntax of boxplots (example code).
+learn_tapply(2) - General syntax of boxplots (variables).
+learn_tapply(3) - General syntax of boxplots (commands/functions).
+learn_tapply(4) - Worked boxplot example.
+learn_tapply(5) - Boxplot practice problem.
+learn_tapply(6) - Boxplot practice problem solution.
+learn_tapply(7) - Recomendations moving forward.
+}
 \author{Sahasrabudhe, Mayrer, Patel, Jacobs
 %%  ~~who you are~~
 }

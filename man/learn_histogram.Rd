@@ -10,6 +10,35 @@
 \usage{Where x is a value between 0-5
 learn_histogram(x)
 }
+\arguments{
+  \item{x}{0-3
+%%     ~~Describe \code{x} here~~
+}
+}
+\details{
+'learn_histogram(0)' to learn about the uses of histograms
+
+  'learn_histogram(1)' for a worked histogram example using a dataset
+
+  'learn_histogram(2)' for a worked histogram example that changes binwidth
+
+'learn_histogram(3)' for a worked histogram example that changes the color aesthetics
+
+'learn_histogram(4)' for a worked histogram example that changes colors based on a categorical variable
+
+'learn_histogram(5)' to work through more histogram examples
+%%  ~~ If necessary, more details than the description above ~~
+}
+\value{
+%%  ~Describe the value returned
+%%  If it is a LIST, use
+%%  \item{comp1 }{Description of 'comp1'}
+%%  \item{comp2 }{Description of 'comp2'}
+%% ...
+}
+\references{
+%% ~put references to the literature/web site here ~
+}
 \author{Sahasrabudhe, Mayrer, Patel, Jacobs
 %%  ~~who you are~~
 }
