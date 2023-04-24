@@ -39,7 +39,7 @@ To learn histograms, type learn_histogram(0)
 To learn scatterplot, type learn_scatterplot(0)
 To learn box plot, type learn_boxplot(0)
 To learn pie chart, type learn_piechart(0)
-To learn bar chart type learn_barchart(0)", "green")
+To learn bar chart type learn_barchart(0)", "blue")
 }
 
 
