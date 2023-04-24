@@ -17,10 +17,15 @@ learn_apply(x)
 }
 }
 \details{
+
 learn_apply(0) - Description of apply() function
+
 learn_apply(1) - Description of dataframe used for example
+
 learn_apply(2) - Margin of 1 Example
+
 learn_apply(3) - Margin of 2 Example
+
 learn_apply(4) - End of Apply Tutorial
 }
 

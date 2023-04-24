@@ -16,14 +16,22 @@ learn_boxplot(x)
 }
 }
 \details{
-learn_tapply(0) - Description and usages of boxplots.
-learn_tapply(1) - General syntax of boxplots (example code).
-learn_tapply(2) - General syntax of boxplots (variables).
-learn_tapply(3) - General syntax of boxplots (commands/functions).
-learn_tapply(4) - Worked boxplot example.
-learn_tapply(5) - Boxplot practice problem.
-learn_tapply(6) - Boxplot practice problem solution.
-learn_tapply(7) - Recomendations moving forward.
+
+learn_boxplot(0) - Description and usages of boxplots.
+
+learn_boxplot(1) - General syntax of boxplots (example code).
+
+learn_boxplot(2) - General syntax of boxplots (variables).
+
+learn_boxplot(3) - General syntax of boxplots (commands/functions).
+
+learn_boxplot(4) - Worked boxplot example.
+
+learn_boxplot(5) - Boxplot practice problem.
+
+learn_boxplot(6) - Boxplot practice problem solution.
+
+learn_boxplot(7) - Recomendations moving forward.
 }
 \author{Sahasrabudhe, Mayrer, Patel, Jacobs
 %%  ~~who you are~~

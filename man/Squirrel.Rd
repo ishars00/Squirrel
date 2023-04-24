@@ -39,6 +39,7 @@ squirrel()
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{'squirrel_apply()' to learn about the apply family.
+
 'squirrel_ggplot2()' to learn about data visualization using ggplot2.
 
 %% ~~objects to See Also as \code{\link{help}}, ~~~

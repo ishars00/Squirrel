@@ -39,11 +39,17 @@ squirrel_ggplot2()
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{'squirrel()' to go back to the beginning.
+
 'squirrel_apply()' to learn about the apply family functions.
+
 'learn_scatterplot(0)' to learn about scatterplots.
+
 'learn_histogram(0)' to learn about histograms.
+
 'learn_barchart(0)' to learn about barcharts.
+
 'learn_boxplot(0)' to learn about boxplots.
+
 'learn_piechart(0)' to learn about piecharts.
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }

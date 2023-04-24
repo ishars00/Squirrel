@@ -17,14 +17,23 @@ learn_tapply(x)
 }
 }
 \details{
+
 learn_tapply(0) - Description and usages of tapply.
+
 learn_tapply(1) - General syntax of tapply.
+
 learn_tapply(2) - General syntax of tapply (dataframe).
+
 learn_tapply(3) - General syntax of tapply (index).
+
 learn_tapply(4) - General syntax of tapply (function).
+
 learn_tapply(5) - General syntax of tapply (argument).
+
 learn_tapply(6) - Worked tapply example problem.
+
 learn_tapply(7) - Tapply practice problem.
+
 learn_tapply(8) - Tapply practice problem solution.
 }
 \value{
