@@ -1,27 +1,23 @@
-x<-c("tidyverse","insight")
 
-invisible(lapply(x, library, character.only = TRUE))
+library(devtools)
 
-options(defaultPackages=c(getOption("defaultPackages"),
-                          "tidyverse","insight"))
+library(roxygen2)
 
-require(tidyverse)
-require(insight)
+library(insight)
+library(ggplot2)
 
-#Data
+
 hair <- c("Blonde", "Brown", "Black", "Red", "Brown", "Brown", "Brown", "Black", "Blonde", "Brown")
 sex <- c(rep("F", 5), rep("M", 5))
 practice <- data.frame(hair,sex)
 
-#Introduction Functions
 squirrel = function(x){
-  message(
+  print_color(
     "Welcome to squirrel, a tutorial package that details the apply family of functions and a few ggplot2 figures.
-    Install the 'insight' and 'tidyverse' packages before beginning the tutorials.
 
 To start an apply tutorial, type squirrel_apply()
 
-To start a ggplot2 tutorial, type squirrel_ggplot2()")
+To start a ggplot2 tutorial, type squirrel_ggplot2()", "black")
 }
 
 squirrel_apply = function(x){
@@ -42,13 +38,13 @@ Welcome to the ggplot2 tutorial menu! To learn about ggplot2 figures, type the c
 To learn histograms, type learn_histogram(0)
 To learn scatterplot, type learn_scatterplot(0)
 To learn box plot, type learn_boxplot(0)
-To learn pie charts, type learn_piechart(0)
-To learn bar charts type learn_barchart(0)", "green")
+To learn pie chart, type learn_piechart(0)
+To learn bar chart type learn_barchart(0)", "green")
 }
 
 
 #Apply Family
-##lapply
+
 learn_lapply = function(x){
   if(x==0){
     print_color("
@@ -65,10 +61,10 @@ enter learn_lapply(1) to continue this tutorial", "green")
 
 q = list(X=c(2,6,7,6,7,8,9)) # Example List
 
-Above is a common method for generating your own list in R,
+Above is a common method for generating a unique list in R,
 try generating your own list defined as q. You should create a list
 of numbers in the parenthese separeated by commas. This list can be as long
-as you like! We will use your defined list q going forward.
+as you like! We will use your defined list q going forward forward.
 enter learn_lapply(2) to continue this tutorial", "green")
   }else if(x==2){
     print_color("
@@ -125,23 +121,19 @@ This tutorial has run through the basic uses of the lapply function in R.
 Note that this function may also be used with data frames and vectors,
 for this specific tutorial we have demonstrated using the list created by you.
 
-Formal components of the lapply function that we used:
-lapply(X, FUN, ...)
-X = a vector of an expressionable object
-FUN = a function to be applied
-... = optional arguments
-
+Try to play around with other datasets to learn more about the lapply function.
+Go back to the squirrel_apply() to learn more about the apply family functions or
+go to squirrel_ggplot2() to learn about data visualization.
 enter learn_lapply(0) to restart this tutorial", "green")
-}else if (x==7) { print_color("
-Try to play around with other datasets to learn more about the lapply function. Go back to the squirrel_apply() to learn more about the apply family functions or go to squirrel_ggplot2() to learn about data visualization.","blue")
-}else if(x<0){
-  print_color("Try again ;) - Type learn_lapply(0) to start the lapply lesson.", "red")
-} else if(x>7) {
-  print_color("Try again ;) - Type learn_lapply(0) to start the lapply lesson.", "red")
-}}
+  }
+  else if(x<0){
+    print_color("Try again ;) - type learn_lapply(0-6) for lessons on the sapply function!", "red")
+  } else if(x>6){
+    print_color("Try again ;) - type learn_lapply(0-6) for lessons on the sapply function!", "red")
+  }
+}
 
 
-##sapply
 learn_sapply = function(x) {
   if (x==0) { print_color("
   Let's look at the sapply function and its inputs.
@@ -171,16 +163,16 @@ learn_sapply = function(x) {
 
        Try to play around with the cars dataset and other datasets to try some of the basic R functions as well as creating some of your own in the sapply.
     Go back to the squirrel_apply() to learn more about the apply family functions or go to squirrel_ggplot2() to learn about data visualization.","green")
+  } else if(x==4){
+    print_color("
+   ","green")
   } else if(x<0){
     print_color("Try again ;) - type learn_sapply(0-4) for lessons on the sapply function!", "red")
-  } else if(x>3){
+  } else if(x>4){
     print_color("Try again ;) - type learn_sapply(0-4) for lessons on the sapply function!", "red")
   }
 }
 
-
-
-##tapply
 learn_tapply = function(x){
   if(x==0){
     print_color("
@@ -233,7 +225,6 @@ go to squirrel_ggplot2() to learn about data visualization", "green")
   }
 }
 
-##apply
 learn_apply = function(x){
   if(x==0){
     print_color("
@@ -258,9 +249,11 @@ Type print(cars) to view the dataset. Type learn_apply(2) for the next step.", "
       X is your array/matrix/dataset.
       The margin is a vector giving the subscripts which the function will be applied over.
       Function is the function you want to apply across your dataset.
-Type apply(cars, 1, mean). We are finding the average speed and average distance traveled to stop, so mean represents our function.
+Type apply(cars, 1, mean). We are finding the average speed and average distance traveled to stop, 
+so mean represents our function.
 
-You should see 3 rows of a lot of different numbers! Using 1 in the margin will apply your function to rows. This is not really what we are looking for!
+You should see 3 rows of a lot of different numbers! Using 1 in the margin will apply your function to rows. 
+This is not really what we are looking for!
 
 Type learn_apply(3) for the next step. ", "green")
   } else if(x==3){
@@ -269,15 +262,18 @@ Type learn_apply(3) for the next step. ", "green")
       X is your array/matrix/dataset.
       The margin is a vector giving the subscripts which the function will be applied over.
       Function is the function you want to apply across your dataset.
-Type apply(cars,2,mean). This time, you should only see two numbers: the average speed and average distance traveled. Using 2 in the margin will apply your function to the columns. The speed is pretty low, but remember this data is from the 1920s!
+Type apply(cars,2,mean). This time, you should only see two numbers: the average speed and average distance traveled. 
+Using 2 in the margin will apply your function to the columns. The speed is pretty low, but remember this data is from the 1920s!
 
 Type apply(4) for the next step.", "green")
   } else if(x==4){
     print_color("
 Congratulations! You have learned how to use the apply() function.
 
-For more practice, you can use other R datasets/frames such as mtcars, or by creating your own matrix (ex: matrix <- matrix(c(3, 9, -1, 4, 2, 6,8,9,14), nrow = 3).
-Go back to the squirrel_apply() to learn more about the apply family functions or go to squirrel_ggplot2() to learn about data visualization.","green")
+For more practice, you can use other R datasets/frames such as mtcars, or by creating your own matrix 
+(ex: matrix <- matrix(c(3, 9, -1, 4, 2, 6,8,9,14), nrow = 3).
+Go back to the squirrel_apply() to learn more about the apply family functions 
+or go to squirrel_ggplot2() to learn about data visualization.","green")
   } else if(x<0){
     print_color("Try again ;) - type learn_apply(0-5) for lessons on the apply function!", "red")
   } else if(x>4){
@@ -285,18 +281,17 @@ Go back to the squirrel_apply() to learn more about the apply family functions o
   }
 }
 
-#Data Visualization
-##histograms
+
 learn_histogram = function(x){
-  if (x==0) { print_color("The histogram function in ggplot is a great way to visualize the frequency of a numerical variable.
+  if (x==0) { print_color("The histogram function of in ggplot is a great way to visualize the frequency of a numerical variable.
               Type learn_histogram(1) to learn more.", "blue")
   }else if (x==1){
-    print_color("Let's use the iris dataset to create our histogram plots. You can type head(iris) to look at the dataset. You'll see a variable called 'Petal.Length' that tells us the petal length of a flower. Type
+    print_color("Let's use the iris dataset to create our histogram plots. You can type head(iris) to look at the dataset. You'll see a variable called 'Petal.Length' that tells us the miles per gallon for a car. Type
 
     ggplot(iris) +
     geom_histogram(aes(x=Petal.Length))
 
-  to obtain a histogram of petal lengths. Type learn_histogram(2) to learn more about plotting histograms using ggplot2", "blue")
+  to obtain a histogram of miles per gallon. Type learn_histogram(2) to learn more about plotting histograms using ggplot2", "blue")
   }else if(x==2){
     print_color("Notice that the previous graph recommends us to choose a better binwidth. The binwidth determines the range of data within each bar. You can choose your binwidth by adding an argument in geom_histogram. Type
 
@@ -331,7 +326,6 @@ learn_histogram = function(x){
   }
 }
 
-##piecharts
 learn_piechart = function(x){
   if(x==0){
     print_color("
@@ -372,15 +366,15 @@ Type 'learn_piechart(4)' for a worked example or 'learn_piechart(5)' for a pract
 Let's create a piechart using the 'gear' variable!
 
   'mtcars' is the data set we are using,
-  'gear' is the variable the pie chart will be based on (we'll have to factor since it's numeric),
+  'gear' is the variable the pie chart will be based on,
   'Pie Chart of the Number of Cars by Number of Gears' will be the title,
   'Number of Gears' will be the legend label,
   Following the general syntax to create a piechart we have:
 
- pie_chart <- ggplot(mtcars, aes(x=' ', fill=factor(gear))) +
- geom_bar(width = 1, stat = 'count') +
- coord_polar(theta = 'y') +
- labs(title ='Pie Chart of Number of Cars by Number of Gears', fill = 'Number of Gears')
+  pie_chart <- ggplot(cars, aes(x = '', fill = gear)) +
+  geom_bar(width = 1, stat = 'count') +
+  coord_polar(theta = 'y') +
+  labs(title = 'Pie Chart of Number of Cars by Number of Gears', fill = 'Number of Gears')
 
   Type 'learn_piechart(0)' to start again or 'learn_piechart(5)' for a practice problem.", 'blue')
   } else if(x==5){
@@ -391,7 +385,7 @@ Let's create a piechart using the 'gear' variable!
     print_color("
 The solution is as follows:
 
-  pie_chart <- ggplot(mtcars, aes(x = '', fill = factor(cyl))) +
+  pie_chart <- ggplot(cars, aes(x = '', fill = cyl)) +
   geom_bar(width = 1, stat = 'count') +
   coord_polar(theta = 'y') +
   labs(title = 'Pie Chart of Number of Cars by Number of Cylinders', fill = 'Number of Cylinders')
@@ -407,7 +401,7 @@ Try to play around with the mtcars dataset and other datasets to create more pie
   }
 }
 
-##boxplots
+
 learn_boxplot = function(x){
   if(x==0){
     print_color("
@@ -454,7 +448,7 @@ The general syntax to create a boxplot using ggplot2 is as follows:
   Type 'learn_boxplot(0)' to start again or 'learn_boxplot(5)' for a practice problem.", "blue")
   } else if(x==5){
     print_color("
-    Try creating a boxplot of car stopping distance using the 'cars' dataset.
+  Try creating a boxplot of car stopping distance using the 'cars' dataset.
   Type 'learn_boxplot(6)' for the solution.", "blue")
   } else if(x==6){
     print_color("
@@ -469,14 +463,12 @@ Try to play around with the mtcars dataset and other datasets to create more box
   }else if(x<0){
     print_color("
     Try again ;) - Type learn_boxplot(0) to start the boxplot lesson.", "red")
-  } else if(x>6) {
+  } else if(x>7) {
     print_color("
     Try again ;) - Type learn_boxplot(0) to start the boxplot lesson.", "red")
   }
 }
 
-
-##scatterplots
 learn_scatterplot = function(x){
   if(x==0){
     print_color("
@@ -576,14 +568,12 @@ Try to play around with the iris dataset and other datasets to create more boxpl
   }
 }
 
-
-##barcharts
 learn_barchart = function(x){
   if(x==0){
     print_color("
 Bar charts are used to help visualize categorical variables. Bar charts are useful for comparing variables that have different levels, such as hair color.  We will use ggplot()+geom_bar() to create a bar chart. We will use the dataframe 'practice' to look at the distribution of hair color and sex of ten people.
 Type 'practice' to view the data.
-Type learn_bargraph(1) to start setting up the bar chart.", "blue")
+Type learn_barchart(1) to start setting up the bar chart.", "blue")
   }else if(x==1){
     print_color("
 The ggplot() function is set up like this: ggplot(your_dataset, aes(x=x axis variable, y=y axis variable)). aes() is used within the ggplot function to set your x and y variables. We add geom_bar() to tell ggplot we want to see this data in a bar chart! Type
